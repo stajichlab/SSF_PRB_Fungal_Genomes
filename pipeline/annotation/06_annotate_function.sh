@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash -l
 #SBATCH  -N 1 -n 1 -c 32
 #SBATCH --mem 96gb
 #SBATCH --output=logs/annotate_function.%a.log

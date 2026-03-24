@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash -l
 #SBATCH -c 24 -n 1 --nodes 1 --mem 96G
 #SBATCH --time 72:00:00 --out logs/annotate_iprscan.%a.log
 module load funannotate

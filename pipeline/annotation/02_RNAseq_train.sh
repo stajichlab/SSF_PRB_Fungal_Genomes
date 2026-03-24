@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash -l
 #SBATCH --time 6-0:00:00 -c 24 -n 1 --nodes 1 --mem 96G --out logs/annotate_train.%a.log
 
 module load funannotate
