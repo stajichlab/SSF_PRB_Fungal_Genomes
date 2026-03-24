@@ -1,0 +1,15 @@
+Assembly statistics for: genomes/Paracremonium.sorted.fasta
+   CONTIG COUNT  =  955
+   TOTAL LENGTH  =  41669363
+            MIN  =  500
+            MAX  =  481744
+         MEDIAN  =  14720
+           MEAN  =  43632.84
+            L50  =  101
+            N50  =  129505
+            L90  =  380
+            N90  =  25929
+            GC%  =  47.85
+  T2T SCAFFOLDS  =  0
+   TELOMERE FWD  =  2
+   TELOMERE REV  =  2

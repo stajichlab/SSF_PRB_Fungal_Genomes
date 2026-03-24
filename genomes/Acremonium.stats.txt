@@ -1,0 +1,15 @@
+Assembly statistics for: genomes/Acremonium.sorted.fasta
+   CONTIG COUNT  =  249
+   TOTAL LENGTH  =  40120433
+            MIN  =  500
+            MAX  =  3068779
+         MEDIAN  =  5795
+           MEAN  =  161126.24
+            L50  =  18
+            N50  =  583793
+            L90  =  60
+            N90  =  200275
+            GC%  =  56.56
+  T2T SCAFFOLDS  =  0
+   TELOMERE FWD  =  4
+   TELOMERE REV  =  7

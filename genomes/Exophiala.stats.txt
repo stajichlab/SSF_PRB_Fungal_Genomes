@@ -1,0 +1,15 @@
+Assembly statistics for: genomes/Exophiala.sorted.fasta
+   CONTIG COUNT  =  99
+   TOTAL LENGTH  =  31970712
+            MIN  =  506
+            MAX  =  3909335
+         MEDIAN  =  35520
+           MEAN  =  322936.48
+            L50  =  9
+            N50  =  989571
+            L90  =  31
+            N90  =  258225
+            GC%  =  52.10
+  T2T SCAFFOLDS  =  0
+   TELOMERE FWD  =  3
+   TELOMERE REV  =  5

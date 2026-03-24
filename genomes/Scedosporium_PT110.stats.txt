@@ -1,0 +1,15 @@
+Assembly statistics for: genomes/Scedosporium_PT110.sorted.fasta
+   CONTIG COUNT  =  300
+   TOTAL LENGTH  =  42858876
+            MIN  =  508
+            MAX  =  1678674
+         MEDIAN  =  41380
+           MEAN  =  142862.92
+            L50  =  28
+            N50  =  498560
+            L90  =  105
+            N90  =  93800
+            GC%  =  50.80
+  T2T SCAFFOLDS  =  0
+   TELOMERE FWD  =  7
+   TELOMERE REV  =  6

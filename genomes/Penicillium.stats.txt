@@ -1,0 +1,15 @@
+Assembly statistics for: genomes/Penicillium.sorted.fasta
+   CONTIG COUNT  =  1017
+   TOTAL LENGTH  =  35723470
+            MIN  =  500
+            MAX  =  647492
+         MEDIAN  =  5679
+           MEAN  =  35126.32
+            L50  =  82
+            N50  =  131041
+            L90  =  303
+            N90  =  25652
+            GC%  =  50.73
+  T2T SCAFFOLDS  =  0
+   TELOMERE FWD  =  1
+   TELOMERE REV  =  3
