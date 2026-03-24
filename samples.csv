@@ -1,0 +1,6 @@
+ID,FileBase,SRARun,Species,Strain,TaxonID,LocusTag,BioProject,BioSample,BUSCO,Notes
+Acremonium,Acremonium,,Acremonium sp.,AntShAcr,159075,ANTSHACR,,,sordariomycetes_odb10,No RNA
+Exophiala,Exophiala,,Exophiala sp.,AntShExo,5583,ANTSHEXO,,,eurotiomycetes_odb10,No RNA
+Paracremonium,Paracremonium,,Paracremonium sp.,AntShPar,1634942,ANTSHPAR,,,sordariomycetes_odb10,No RNA
+Penicillium,Penicillium,,Penicillium sp.,AntShPen,5073,ANTSHPEN,,,eurotiales_odb10,No RNA
+Scedosporium_PT110,Scedosporium_PT110,,Scedosporium sp.,PT110,41687,ANTSHSCED,,,sordariomycetes_odb10,No RNA
