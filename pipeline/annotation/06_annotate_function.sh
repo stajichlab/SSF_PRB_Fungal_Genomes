@@ -33,18 +33,15 @@ if [ $N -gt $MAX ]; then
   echo "$N is too big, only $MAX lines in $SAMPLEFILE"
   exit
 fi
-TEMPLATE=$(realpath lib/sbt/Afum.sbt)
-SPECIES="Aspergillus fumigatus"
+TEMPLATE=$(realpath lib/sbt/Antrim.sbt)
+echo "$TEMPLATE is template"
 IFS=,
 tail -n +2 $SAMPLEFILE | sed -n ${N}p | while read ID FILEBASE SRARUN SPECIES STRAIN TAXONID LOCUSTAG BIOPROJECT BIOSAMPLE BUSCO NOTES
 do
-  BASE=$(echo -n "$SPECIES $STRAIN" | perl -p -e 's/\s+/_/g')
-  POLISH=pilon
   STRAIN_NOSPACE=$(echo -n "$STRAIN" | perl -p -e 's/\s+/_/g')
   echo "$BASE"
-  for type in canu
-  do
-     name=$STRAIN.$type.$POLISH
+  BASE=$(echo -n "$SPECIES $STRAIN" | perl -p -e 's/\s+/_/g')
+  name=$ID
 #  TEMPLATE=$(realpath lib/sbt/$STRAIN_NOSPACE.sbt)
 #  if [ ! -f $TEMPLATE ]; then
 #    echo "NO TEMPLATE for $name"
@@ -61,6 +58,5 @@ do
       fi
     fi
     # need to add detect for antismash and then add that
-   funannotate annotate --sbt $TEMPLATE --busco_db $BUSCO -i $OUTDIR/$name --species "$SPECIES" --strain "$STRAIN" --cpus $CPUS $MOREFEATURE $EXTRAANNOT
- done
+   funannotate annotate --sbt $TEMPLATE --busco_db $BUSCO -i $OUTDIR/$name --species "$SPECIES" --strain "$STRAIN" --rename $LOCUSTAG --cpus $CPUS $MOREFEATURE $EXTRAANNOT
 done

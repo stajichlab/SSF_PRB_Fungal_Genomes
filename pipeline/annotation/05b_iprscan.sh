@@ -26,22 +26,16 @@ fi
 IFS=,
 tail -n +2 $SAMPLEFILE | sed -n ${N}p | while read ID FILEBASE SRARUN SPECIES STRAIN TAXONID LOCUSTAG BIOPROJECT BIOSAMPLE BUSCO NOTES
 do
-    SEQCENTER=MiGS
     echo "STRAIN is $STRAIN LOCUSTAG is $LOCUSTAG"
-    BASE=$(echo -n "$SPECIES $STRAIN" | perl -p -e 's/\s+/_/g')
-    for type in canu
-    do
-       POLISH=pilon
-       name=$STRAIN.$type.$POLISH
-       if [ ! -d $OUTDIR/$name ]; then
+    name=$ID
+    if [ ! -d $OUTDIR/$name ]; then
        echo "No annotation dir for ${name}"
        exit
-       fi
-       mkdir -p $OUTDIR/$name/annotate_misc
-       XML=$OUTDIR/$name/annotate_misc/iprscan.xml
-       IPRPATH=$(which interproscan.sh)
-       if [ ! -f $XML ]; then
+    fi
+    mkdir -p $OUTDIR/$name/annotate_misc
+    XML=$OUTDIR/$name/annotate_misc/iprscan.xml
+    IPRPATH=$(which interproscan.sh)
+    if [ ! -f $XML ]; then
        time funannotate iprscan -i $OUTDIR/$name -o $XML -m local -c $CPU --iprscan_path $IPRPATH
-       fi
-    done
+    fi
 done

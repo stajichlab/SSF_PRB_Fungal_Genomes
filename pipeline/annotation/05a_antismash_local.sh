@@ -31,11 +31,7 @@ IFS=,
 tail -n +2 $SAMPLEFILE | sed -n ${N}p | while read ID FILEBASE SRARUN SPECIES STRAIN TAXONID LOCUSTAG BIOPROJECT BIOSAMPLE BUSCO NOTES
 do
     echo "STRAIN is $STRAIN LOCUSTAG is $LOCUSTAG"
-    BASE=$(echo -n "$SPECIES $STRAIN" | perl -p -e 's/\s+/_/g')
-    for type in canu
-    do
-    POLISH=pilon
-    name=$STRAIN.$type.$POLISH
+    name=$ID
     if [ ! -d $OUTDIR/$name ]; then
         echo "No annotation dir for ${name}"
         exit
@@ -46,8 +42,7 @@ do
         #    --asf --fullhmmer --cassis --clusterhmmer --asf --cb-general --pfam2go --cb-subclusters --cb-knownclusters -c $CPU \
         #    $OUTDIR/$name/$INPUTFOLDER/*.gbk
         time antismash --taxon fungi --output-dir $OUTDIR/$name/antismash_local \
-         --genefinding-tool none --fullhmmer --clusterhmmer --cb-general \
-         --pfam2go -c $CPU $OUTDIR/$name/$INPUTFOLDER/*.gbk
+        --genefinding-tool none --fullhmmer --clusterhmmer --cb-general \
+        --pfam2go -c $CPU $OUTDIR/$name/$INPUTFOLDER/*.gbk
     fi
-    done
 done

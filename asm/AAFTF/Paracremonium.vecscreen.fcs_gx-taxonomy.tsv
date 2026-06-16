@@ -1,0 +1,31 @@
+##[["FCS genome report", 2, 1], {"git-rev": "v0.5.5-9-gfc836c1", "run-date": "Wed Mar 18 17:09:41 2026", "db": {"build-date": "2023-01-24", "seqs": 3025824, "Gbp": 709.264}, "run-info": {"agg-cvg": 0.588239, "asserted-div": "fung:ascomycetes", "inferred-primary-divs": ["fung:ascomycetes", "fung:fungi"], "corrected-primary-divs": ["fung:ascomycetes", "fung:fungi"], "genome-hash": "8774c51eb999c640"}}]
+#seq_id	start_pos	end_pos	seq_len	action	div	agg_cont_cov	top_tax_name
+lcl|NODE_646_length_5855_cov_1.961243	1	5855	5855	EXCLUDE	anml:primates	100	Homo sapiens
+lcl|NODE_733_length_2720_cov_1.069032	1	2720	2720	EXCLUDE	anml:primates	98	Homo sapiens
+lcl|NODE_798_length_1435_cov_4.122324	1	1435	1435	EXCLUDE	anml:primates	100	Homo sapiens
+lcl|NODE_820_length_1149_cov_3.026419	1	1149	1149	EXCLUDE	anml:primates	100	Homo sapiens
+lcl|NODE_826_length_1076_cov_1.049526	1	1076	1076	EXCLUDE	anml:primates	100	Homo sapiens
+lcl|NODE_840_length_978_cov_1.927059	1	978	978	EXCLUDE	anml:primates	100	Homo sapiens
+lcl|NODE_854_length_890_cov_1.014417	1	890	890	EXCLUDE	anml:primates	100	Homo sapiens
+lcl|NODE_868_length_812_cov_1.439416	1	812	812	EXCLUDE	anml:primates	100	Homo sapiens
+lcl|NODE_886_length_737_cov_1.267213	1	737	737	EXCLUDE	anml:primates	97	Homo sapiens
+lcl|NODE_889_length_719_cov_1.062500	1	719	719	EXCLUDE	anml:primates	100	Homo sapiens
+lcl|NODE_896_length_702_cov_1.139130	1	702	702	EXCLUDE	anml:primates	100	Homo sapiens
+lcl|NODE_930_length_593_cov_1.607296	1	593	593	EXCLUDE	anml:primates	100	Homo sapiens
+lcl|NODE_940_length_567_cov_2.754545	1	567	567	EXCLUDE	anml:primates	100	Homo sapiens
+lcl|NODE_966_length_505_cov_2.566138	1	505	505	EXCLUDE	anml:primates	100	Homo sapiens
+lcl|NODE_967_length_505_cov_1.957672	1	505	505	EXCLUDE	anml:primates	100	Homo sapiens
+lcl|NODE_976_length_486_cov_1.910864	1	486	486	EXCLUDE	anml:primates	100	Homo sapiens
+lcl|NODE_989_length_469_cov_2.576023	1	469	469	EXCLUDE	anml:primates	100	Homo sapiens
+lcl|NODE_991_length_467_cov_6.664706	1	467	467	EXCLUDE	anml:primates	100	Homo sapiens
+lcl|NODE_993_length_465_cov_1.118343	1	465	465	EXCLUDE	prok:high GC Gram+	100	Cutibacterium namnetense
+lcl|NODE_998_length_458_cov_1.235650	1	458	458	EXCLUDE	anml:primates	100	Homo sapiens
+lcl|NODE_1000_length_457_cov_1.021212	1	457	457	EXCLUDE	fung:chytrids	94	Rhizoclosmatium globosum
+lcl|NODE_1002_length_456_cov_1.349544	1	456	456	EXCLUDE	prok:high GC Gram+	100	Cutibacterium acnes
+lcl|NODE_1005_length_454_cov_1.180428	1	454	454	EXCLUDE	prok:high GC Gram+	100	Cutibacterium acnes
+lcl|NODE_1018_length_446_cov_1.359375	1	446	446	EXCLUDE	anml:primates	98	Homo sapiens
+lcl|NODE_1044_length_418_cov_1.003436	1	418	418	EXCLUDE	anml:primates	100	Homo sapiens
+lcl|NODE_1057_length_408_cov_1.448399	1	408	408	EXCLUDE	prok:high GC Gram+	100	Cutibacterium acnes
+lcl|NODE_1061_length_406_cov_1.161290	1	406	406	EXCLUDE	prok:high GC Gram+	100	Cutibacterium acnes
+lcl|NODE_1065_length_403_cov_1.079710	1	403	403	EXCLUDE	anml:primates	100	Macaca fascicularis
+lcl|NODE_1069_length_399_cov_1.099265	1	399	399	EXCLUDE	prok:high GC Gram+	100	Cutibacterium acnes
