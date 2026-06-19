@@ -11,7 +11,6 @@
 # child jobs (phyling align/filter/tree, phykit, modeltest-ng, iqtree3, raxml-ng).
 #
 # Run:   sbatch run_phyling.sh
-# Resume after interruption: EXTRA="-resume" sbatch run_phyling.sh
 #
 # Workflow: PHYLING align/filter (top 50 markers) -> PhyKIT concat ->
 #           ModelTest-NG (AIC + BIC) -> IQ-TREE 3 (UFBoot+SH-aLRT) AND
@@ -25,7 +24,9 @@ module load nextflow
 INPUT=$(realpath input)
 PREFIX=Exophiala_v1
 MARKERSET=ascomycota_odb12
-OUTDIR=results/pep
+OUTDIR=results/${PREFIX}_protein
+
+mkdir $PREFIX
 
 nextflow run stajichlab/nf_phyling \
     -profile slurm,ucr_hpcc \
@@ -41,4 +42,4 @@ nextflow run stajichlab/nf_phyling \
     --bs_trees_pep 100 \
     --publish_mode copy \
     --outdir "${OUTDIR}" \
-    ${EXTRA:-}
+    "$@"

@@ -20,19 +20,18 @@
 set -euo pipefail
 
 mkdir -p logs
-module load nextflow
+#module load nextflow
 module load singularity
-
+module unload miniconda3
 INPUT=$(realpath input)
-PREFIX=Exophiala_fungi_odb10_v1
+PREFIX=Exophiala_v2
 MARKERSET=fungi_odb10
 OUTDIR=results
-mkdir -p $OUTDIR
+mkdir -p $OUTDIR/$PREFIX
 export NXF_SINGULARITY_HOME_MOUNT=true
 export SINGULARITY_BINDPATH="$HOME,/bigdata/stajichlab/$USER"
-nextflow run stajichlab/nf_phyling \
-    -profile singularity_slurm,ucr_hpcc \
-    -c phyling_modules.config \
+nextflow run ~/projects/nf/nf_phyling \
+    -profile singularity,ucr_hpcc \
     -resume \
     --seq_type protein \
     --input "${INPUT}" \
@@ -43,5 +42,6 @@ nextflow run stajichlab/nf_phyling \
     --alrt_count 1000 \
     --bs_trees_pep 100 \
     --publish_mode copy \
-    --outdir "${OUTDIR}" \
+    --outdir "${OUTDIR}/$PREFIX" \
+
     "$@"
